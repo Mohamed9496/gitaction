@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      
 jobs:
   example-job:
      runs-on: ubuntu-latest
@@ -11,3 +12,11 @@ jobs:
      steps:
        - name: print a welcome message 
          run: echo "welcome to our first GitHub Actions Workflow "
+
+       - name: checkout repository  
+         uses: actions/checkout@v5.0.0
+
+       - name: list repository
+         run: ls -la
+
+         
